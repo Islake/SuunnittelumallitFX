@@ -1,7 +1,6 @@
-module com.example.suunnittelumallitfx {
-    requires javafx.controls;
-    requires javafx.fxml;
+module flyweight {
     requires javafx.graphics;
-
-    exports com.example.suunnittelumallitfx.memento;
+    requires javafx.controls;
+    requires javafx.fxml; // Ensure you include all necessary JavaFX modules
+    opens flyweight to javafx.graphics;
 }
