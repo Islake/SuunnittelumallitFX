@@ -12,19 +12,19 @@ public class TileGraphicFactory {
         if (image == null) {
             switch (type) {
                 case "swamp":
-                    image = new Image(TileGraphicFactory.class.getResourceAsStream("/img/swamp.jpg"));
+                    image = new Image(TileGraphicFactory.class.getResourceAsStream("/img/one.png"));
                     break;
                 case "water":
-                    image = new Image(TileGraphicFactory.class.getResourceAsStream("/img/ocean.png"));
+                    image = new Image(TileGraphicFactory.class.getResourceAsStream("/img/two.png"));
                     break;
                 case "forest":
-                    image = new Image(TileGraphicFactory.class.getResourceAsStream("/img/forest.png"));
+                    image = new Image(TileGraphicFactory.class.getResourceAsStream("/img/three.png"));
                     break;
                 case "road":
-                    image = new Image(TileGraphicFactory.class.getResourceAsStream("/img/road.png"));
+                    image = new Image(TileGraphicFactory.class.getResourceAsStream("/img/four.png"));
                     break;
                 case "building":
-                    image = new Image(TileGraphicFactory.class.getResourceAsStream("/img/building.png"));
+                    image = new Image(TileGraphicFactory.class.getResourceAsStream("/img/five.png"));
                     break;
                 default:
                     System.out.println("NOTHING");
