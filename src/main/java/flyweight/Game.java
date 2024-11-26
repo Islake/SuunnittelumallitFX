@@ -12,14 +12,14 @@ import javafx.stage.Stage;
 import java.util.Random;
 
 public class Game extends Application {
-    private static final int TILE_SIZE = 64;
+    private static final int TILE_SIZE = 32;
     private Map map;
     private Canvas canvas;
     private final Random random = new Random();
 
     @Override
     public void start(Stage primaryStage) {
-        map = new WildernessMap(10, 10);
+        map = new WildernessMap(50, 50);
         canvas = new Canvas(map.getTiles().length * TILE_SIZE, map.getTiles()[0].length * TILE_SIZE);
         GraphicsContext gc = canvas.getGraphicsContext2D();
         renderMap(gc);
@@ -48,9 +48,9 @@ public class Game extends Application {
 
     private void updateMap(GraphicsContext gc) {
         if (random.nextBoolean()) {
-            map = new WildernessMap(10, 10);
+            map = new WildernessMap(50, 50);
         } else {
-            map = new CityMap(10, 10);
+            map = new CityMap(50, 50);
         }
         renderMap(gc);
     }
